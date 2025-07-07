@@ -1,0 +1,9 @@
+Asympotatic Notation
+the efficieny of the programme is caluated based on run time and space is occupied;
+and that efficincy of the programme is described by the Asympotatic Notion;
+1. O--> Big -oh(tell about the worst case senorio)
+the maximum amount of time a programme may take with increase input size;
+generaly represented by the fucntion 
+f(n)-->representing the the running time of an algorithum
+f(n) = c*g(n) , c-->code for which same amount of time taken inspite of input size;
+g(n)-->
