@@ -1,9 +1,69 @@
 Asympotatic Notation
+The efficiency of an algorithm depends on the amount of time, storage and other resources required to execute the algorithm. The efficiency is measured with the help of asymptotic notations.
+An algorithm may not have the same performance for different types of inputs. With the increase in the input size, the performance  changes.
+The study of change in performance of the algorithm with the change in the order of the input size is defined as asymptotic analysis.
 the efficieny of the programme is caluated based on run time and space is occupied;
 and that efficincy of the programme is described by the Asympotatic Notion;
 1. O--> Big -oh(tell about the worst case senorio)
 the maximum amount of time a programme may take with increase input size;
-generaly represented by the fucntion 
+generally represented by the fucntion 
 f(n)-->representing the the running time of an algorithum
-f(n) = c*g(n) , c-->code for which same amount of time taken inspite of input size;
-g(n)-->
+we are always interested in the worst-case scenario.
+f(n) <= c*g(n)
+The above expression can be described as a function f(n) belongs to the set O(g(n)) if there exists a positive constant c such that it lies between 0 and cg(n), for sufficiently large n.
+, 
+c-->constant time operation(A constant-time operation in computer science refers to an operation whose execution time remains the same regardless of the size of the input.)
+.Accessing an element in an array by its index (e.g., array[5]) is a constant-time operation because the location of the element is directly calculated, regardless of the array's size.
+.Basic arithmetic operations like addition, subtraction, multiplication, and division are generally considered constant time.
+.Pushing or popping an element from a stack or queue (assuming a fixed-size implementation) is also constant time.
+g(n)-->(a simpler function representing growth rate of time w.r.t to  sufficiently large input size)
+
+2. big-omega - 
+f(n) >= c*g(n)
+The above expression can be described as a function f(n) belongs to the set Ω(g(n)) if there exists a positive constant c such that it lies above cg(n), for sufficiently large n.
+
+3. theta -
+c1*g(n)<=f(n) = c2*g(n);
+The above expression can be described as a function f(n) belongs to the set Θ(g(n)) if there exist positive constants c1 and c2 such that it can be sandwiched between c1g(n) and c2g(n), for sufficiently large n.
+
+example of code :
+for (int i = 0; i < n; i++) {
+    printf("Hello\n");
+}
+-->The loop runs n times.
+-->Each iteration does a constant-time operation (printing).
+So total time = c × n, where c is a constant.
+We ignore constants in asymptotic notation, so:
+-->Time complexity is O(n).
+
+example code 2:
+for(int i = 0; i < n; i++) {
+    for (int j = 0; j < n; j++) {
+        // constant work
+    }
+}
+-->Outer loop runs n times.
+-->Inner loop runs n times for each outer loop.
+Total iterations = n × n = n².
+-->Time complexity = O(n²)
+
+calculating of time complexity;
+-->T(n) = 3n² + 5n + 6 ⇒ O(n²)
+We apply 3 steps:
+✅ 1. Drop the Lower Order Terms
+3n² + 5n + 6 → 3n² dominates as n becomes large
+So ignore 5n and 6
+✅ 2. Drop Constants
+3n² → We drop the 3, keeping only n²
+✅ 3. Write Big-O
+Final time complexity: O(n²)
+
+for
+O(n!) - Factorial Time:
+O(2^n) - Exponential Time:
+O(n^2) - Quadratic Time:
+growth rate increasses 
+
+
+
+
