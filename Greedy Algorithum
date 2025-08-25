@@ -1,0 +1,14 @@
+Greeedy algorithum works on two thing
+-->Mathematical proof
+--->Intution
+--->
+to apply a greedy Algorithum we make and proof it using mathematic
+-->finding the max of two elment in an array 
+   |---> claim : sort the element and find the last two element and get the sum to get the required anserwer
+   |---> then GA =(GA)n + (GA)n-1
+         and OA = (OA)n + (OA)p
+   |-->Mathematical Proof:
+       |--> GA - OA = ((GA)n - (GA)n-1) - ((OA)n -(OA)p))
+       |--> GA - OA = ((GA)n-1  - (OA)p
+      
+        
