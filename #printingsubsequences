@@ -1,0 +1,23 @@
+from collections import deque
+#finding the no of subsequences:
+def findsubsequences(arr, stack , idx ,size_of_arr):
+    if idx == size_of_arr:
+        print(list(stack))
+        return
+    
+    stack.append(arr[idx])
+    findsubsequences(arr , stack ,  idx+1 , size_of_arr)
+    stack.pop()
+    
+    
+    findsubsequences(arr , stack , idx+1 , size_of_arr)
+    
+
+stack = deque()
+arr = []
+no_of_element = int(input())
+for i in range(no_of_element):
+    arr.append(int(input()))
+    
+findsubsequences(arr, stack , 0 , no_of_element)
+    # list(map(int, input().split()))
